@@ -1,0 +1,147 @@
+.out {
+  width: 50%;
+  margin-top: 100px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+/* ==================================   section for moving animation===================================================== */
+
+.animation {
+  margin: 100px auto;
+  width: 200px;
+  background-color: black;
+  aspect-ratio: 1;
+  display: flex;
+  padding: 100px;
+  border-radius: 20px;
+}
+
+.ball1,
+.ball2,
+.ball3 {
+  border-radius: 50%;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  transform: 1s all ease-in-out;
+  margin-top: 100px;
+
+  animation-name: ben;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-timing-function: steps(200);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.ball1 {
+  animation-delay: 0.1s;
+}
+
+.ball2 {
+  animation-delay: 0.5s;
+}
+
+.ball3 {
+  animation-delay: 0.8s;
+}
+
+@keyframes ben {
+  0% {
+    transform: translateY(0%);
+    background-color: blue;
+  }
+  50% {
+    transform: translateY(15%);
+    background-color: #00ff51;
+  }
+  75% {
+    transform: translateY(30%);
+    background-color: #00ff51;
+  }
+
+  100% {
+    transform: translateY(60%);
+    background-color: #ff00ff;
+  }
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.all {
+  z-index: 1;
+  text-align: center;
+  width: 30%;
+  line-height: 0;
+  margin-top: -80px;
+  margin-left: -30px;
+}
+
+.hh1 {
+  color: #001aff;
+  margin-right: 20px;
+}
+
+.hh2 {
+  color: #ff00ff;
+}
+
+.hh3 {
+  color: #00ff51;
+}
+
+/* ========================SECTION FOR TRANSPARENT TEXT========================================== */
+
+.empty {
+  padding: 30px;
+  margin: 20px auto;
+  background-color: black;
+  width: clamp(80%, 30vw, 80vw);
+  aspect-ratio: 1;
+  border-radius: 20px;
+}
+.txt {
+  display: flex;
+  justify-content: center;
+
+  font-size: 10px;
+  background: url("./banner-02.jpg");
+
+  background-position: 100%;
+  word-spacing: 50px;
+  background-size: contain;
+  color: aliceblue;
+
+  margin: 10px auto;
+  background-clip: text;
+
+  color: transparent;
+  font-weight: bolder;
+  transition: 4s all ease-in-out;
+
+  animation-name: benTech;
+  animation-timing-function: ease-in-out;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes benTech {
+  from {
+    font-size: 40px;
+    background-position: 200% 100%;
+  }
+
+  to {
+    font-size: 100px;
+    margin: 90px auto;
+    background-position: 300% 500%;
+  }
+}
